@@ -11,12 +11,12 @@ import software.bernie.geckolib3.GeckoLib;
 import team.blackmesa.halfcraft.util.Constants;
 import team.blackmesa.halfcraft.util.HalfCraftRegistry;
 
-@Mod("halfcraft")
+@Mod(Constants.MODID)
 public class HalfCraft {
     protected static final Logger LOGGER = LogManager.getLogger();
 
     public HalfCraft() {
-        LOGGER.info("[{}] Initializing...", Constants.MODID);
+        log("Initializing...");
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
@@ -24,7 +24,7 @@ public class HalfCraft {
         GeckoLib.initialize();
         HalfCraftRegistry.registerAll(FMLJavaModLoadingContext.get().getModEventBus());
 
-        LOGGER.info("[{}] Loaded successfully.", Constants.MODID);
+        log("Loaded successfully.");
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -33,5 +33,9 @@ public class HalfCraft {
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // empty
+    }
+
+    public static void log(String msg) {
+        LOGGER.info(String.format("[%s] %s", Constants.MODID, msg));
     }
 }
