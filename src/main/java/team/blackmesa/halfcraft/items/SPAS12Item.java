@@ -1,4 +1,4 @@
 package team.blackmesa.halfcraft.items;
 
-public class MP5Item extends GunItem {
+public class SPAS12Item extends GunItem {
 }
