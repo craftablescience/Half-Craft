@@ -5,5 +5,6 @@ public interface Constants {
 
     interface Items {
         String CROWBAR = "crowbar";
+        String MP5 = "mp5";
     }
 }

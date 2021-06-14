@@ -6,6 +6,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import team.blackmesa.halfcraft.items.CrowbarItem;
+import team.blackmesa.halfcraft.items.MP5Item;
 
 public class HalfCraftRegistry {
     // Registers
@@ -13,6 +14,7 @@ public class HalfCraftRegistry {
 
     // Items
     public static final RegistryObject<Item> CROWBAR = ITEMS.register(Constants.Items.CROWBAR, CrowbarItem::new);
+    public static final RegistryObject<Item> MP5 = ITEMS.register(Constants.Items.MP5, MP5Item::new);
 
     public static void registerAll(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
